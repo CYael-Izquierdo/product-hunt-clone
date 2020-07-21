@@ -1,12 +1,11 @@
-import React, {useEffect, useState, useContext} from "react";
-
-import Layout from "../components/layout/Layout";
+import React from "react";
 import ProductDetails from "../components/layout/ProductDetails";
+import Layout from "../components/layout/Layout";
 import useProducts from "../hooks/useProducts";
 
-const Home = () => {
+const Populars = () => {
 
-    const {products} = useProducts("createdAt");
+    const {products} = useProducts("votesLength");
 
     return (
         <div>
@@ -28,4 +27,4 @@ const Home = () => {
     )
 };
 
-export default Home;
+export default Populars;
